@@ -1,32 +1,88 @@
-# Burn Protocol
+🔥 Burn Protocol (Burn-to-Mint Protocol)
+📌 Descripción general
 
-## Description
-Burn Protocol is an experimental on-chain mechanism (mecanismo en blockchain)
-designed to enable verifiable token burn actions (quema verificable de tokens).
+Burn Protocol es un protocolo on-chain que permite a los usuarios quemar (burn) un token de entrada y recibir a cambio otro token con emisión controlada y deflacionaria.
 
-## What this project is
-- A technical protocol (protocolo técnico)
-- Focused on supply reduction mechanisms (reducción de oferta)
-- Fully transparent and on-chain
+El objetivo del protocolo es introducir un mecanismo económico verificable, donde la creación de nuevos tokens solo ocurre cuando existe una quema real e irreversible de otro activo.
 
-## What this project is NOT
-- Not an investment (no es una inversión)
-- Not a financial product (no es un producto financiero)
-- No profit or returns are promised (no promete ganancias)
+🧠 Problema que resuelve
 
-## Status
-Early development (desarrollo inicial)
+Muchos tokens en el ecosistema cripto carecen de mecanismos reales de reducción de oferta, lo que genera inflación constante y desalineación de incentivos.
 
-## Disclaimer
-This project is experimental and provided for educational and technical purposes only.
-## Smart Contract
+Burn Protocol propone un sistema simple y transparente donde:
 
-The core logic of this project is implemented in the smart contract
-located at:
+la oferta se reduce mediante quema,
 
-contracts/BurnProtocol.sol
+la emisión está directamente ligada al uso real del protocolo,
 
-This contract allows users to burn ERC20 tokens
-by transferring them to a verifiable dead address.
+no existen minteos arbitrarios.
 
-No financial functionality is implemented.
+🔁 Cómo funciona el protocolo (Flow)
+
+1️⃣ El usuario envía un token de entrada (Input Token) al contrato
+2️⃣ El token de entrada se quema enviándolo a la dirección 0x000...dEaD
+3️⃣ El contrato ejecuta la lógica del protocolo
+4️⃣ El usuario recibe un token de salida (Output Token) con emisión controlada
+
+Todo el proceso es:
+
+automático
+
+sin intermediarios
+
+verificable en la blockchain
+
+🧮 Tokenómica (explicada en simple)
+
+El token de salida no puede mintearse libremente
+
+Solo se crea cuando ocurre una quema real
+
+La emisión depende del uso del protocolo
+
+No existe inflación programada arbitraria
+
+Este diseño busca alinear incentivos entre usuarios y oferta del token.
+
+🔐 Seguridad y transparencia
+
+Contratos simples y auditables
+
+Sin custodios
+
+Sin control manual del supply
+
+Toda la lógica es visible en el código
+
+Nota: esta versión corresponde a un prototipo experimental.
+
+🧪 Cómo probar el protocolo (Testing)
+
+El protocolo puede probarse utilizando Remix IDE (entorno de desarrollo online para contratos inteligentes).
+
+Pasos generales:
+
+Desplegar los contratos de tokens de prueba
+
+Desplegar el contrato BurnProtocol indicando las direcciones correctas
+
+Ejecutar la función burnAndMint
+
+Verificar balances y supply
+
+⚠️ Aviso legal (Disclaimer)
+
+Este proyecto es un experimento técnico y educativo.
+No constituye asesoramiento financiero, oferta de inversión ni promesa de rentabilidad.
+
+El uso del protocolo es bajo responsabilidad del usuario.
+
+📎 Enlaces
+
+Código fuente: (repositorio actual)
+
+Prototipo experimental
+
+👤 Autor
+
+Proyecto desarrollado de forma independiente como prueba de concepto.
